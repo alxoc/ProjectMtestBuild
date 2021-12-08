@@ -12,11 +12,11 @@
             <div class="headerContainer">
                 <div class="headerLogo"><p>Project M</p></div>
                 <div class="topnav" id="myTopnav">
-                    <a href="#">Log out</a>
+                    <a href="logout.php">Log out</a>
                     <a href="#">Forums</a>
                     <a href="#">Document hub</a>
                     <a href="#">Information</a>
-                    <a class="active" href="index.html">Home</a>
+                    <a class="active" href="main.php">Home</a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
                     </a>
@@ -35,6 +35,14 @@
                 </div>
             </div>
         </main>
+        <?php
+        session_start();
+
+        if (!isset($_SESSION["username"])) {
+            header("Location: index.php");
+            exit();
+        }
+        ?>
 
         <script>
             /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
