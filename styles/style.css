@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     background-color: var(--background-color);
+
 }
 
 /* Variables */
@@ -149,6 +150,21 @@ body {
     align-items: center;
     height: 550px;
 }
+
+.mainContainer::after {
+    content: "";
+    background: url(../images/logos/1k.png);
+    background-repeat: no-repeat;
+    background-size: 350px 350px;
+    background-position: center;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
 
 .navigationTitle p {
     color: var(--primary-text-color);
